@@ -1,0 +1,9 @@
+cpselect('Image A.jpg','Image B.jpg');
+f1=imread('Image A.jpg');
+f2=imread('Image B.jpg');
+tform=cp2tform(movingPoints,fixedPoints,'affine');
+pic=imtransform(f1,tform);
+subplot(1,2,1),imshow(pic);
+subplot(1,2,2),imshow(f2);
+movingPoints
+fixedPoints
